@@ -46,11 +46,12 @@ export const App = () => {
   };
 
   const Comment = (prop: CommentResponse) => {
-     
-    return (<div className={styles.comments}>
-      <h4>작성자: {prop.email}</h4>
-      {prop.body}{' '}
-    </div>)
+    return (
+      <div className={styles.comments}>
+        <h4>작성자: {prop.email}</h4>
+        {prop.body}{' '}
+      </div>
+    );
   };
 
   useEffect(() => {
@@ -94,9 +95,8 @@ export const App = () => {
         <div>내용</div> <Body {...data}></Body>
         <div>댓글</div>
         {comments.slice(0, 2).map((comment) => (
-        <Comment key = {comment.id} {...comment}></Comment>
+          <Comment key={comment.id} {...comment}></Comment>
         ))}
-
       </div>
     </div>
   );
