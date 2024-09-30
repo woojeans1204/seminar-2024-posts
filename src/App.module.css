@@ -1,0 +1,9 @@
+.wrapper {
+  display: flex;
+  height: 200px;
+  gap: 10px;
+  border: 1px solid red;
+  font-size: 40px;
+  align-items: center;
+  width: fix-content;
+}
