@@ -31,7 +31,7 @@ export const App = () => {
   const Title = (prop: PostResponse) => {
     return (
       <div
-        className={styles.title}
+        className={id === prop.id ? styles.selectedTitle : styles.title}
         onClick={() => {
           if (prop.id !== undefined) setId(prop.id);
         }}
@@ -42,12 +42,12 @@ export const App = () => {
   };
 
   const Body = (prop: PostResponse) => {
-    return <div className={styles.title}>{prop.body} </div>;
+    return <div className={styles.body}>{prop.body} </div>;
   };
 
   const Comment = (prop: CommentResponse) => {
     return (
-      <div className={styles.comments}>
+      <div className={styles.comment}>
         <h4>작성자: {prop.email}</h4>
         {prop.body}{' '}
       </div>
@@ -87,14 +87,14 @@ export const App = () => {
     <div className={styles.wrapper}>
       <div className={styles.page}>
         <div>포스트 목록</div>
-        {posts.slice(0, 5).map((post) => (
+        {posts.slice().map((post) => (
           <Title key={post.id} {...post}></Title>
         ))}
       </div>
       <div className={styles.page}>
         <div>내용</div> <Body {...data}></Body>
         <div>댓글</div>
-        {comments.slice(0, 2).map((comment) => (
+        {comments.slice().map((comment) => (
           <Comment key={comment.id} {...comment}></Comment>
         ))}
       </div>
