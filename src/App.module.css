@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   height: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   font-size: 30px;
   gap: 10px;
   align-items: flex-start;
@@ -11,22 +11,46 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  border: 1px solid blue;
-  margin: 5 0 5 0px;
-  padding: 10px;
+  gap: 20px;
+  /* border: 1px solid blue; */
+  margin: 10 0 10 0px;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 99vh;
 }
 
 .title {
   display: flex;
   gap: 5px;
-  border: 1px solid green;
+  /* border: 1px solid green; */
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+.title:hover {
+  background-color: rgba(70, 70, 70, 0.1);
+  cursor: pointer;
+}
+
+.selectedTitle {
+  display: flex;
+  gap: 5px;
+  background-color: rgba(70, 70, 70, 0.2);
+  /* border: 1px solid green; */
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.body {
+  display: flex;
+  gap: 5px;
+  /* border: 1px solid green; */
   font-size: 18px;
 }
-.comments {
+
+.comment {
   display: flex;
   gap: 5px;
   flex-direction: column;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   font-size: 18px;
 }
