@@ -20,10 +20,12 @@
 }
 
 .title {
-  display: flex;
+  display: inline-flex;
   gap: 5px;
   /* border: 1px solid green; */
   font-size: 18px;
+  width: fit-content;
+  padding: 0px 5px;
   transition: color 0.3s ease;
 }
 .title:hover {
@@ -34,6 +36,8 @@
 .selectedTitle {
   display: flex;
   gap: 5px;
+  padding: 0px 5px;
+  width: fit-content;
   background-color: rgba(70, 70, 70, 0.2);
   /* border: 1px solid green; */
   font-size: 18px;
